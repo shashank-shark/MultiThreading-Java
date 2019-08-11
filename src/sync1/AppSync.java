@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 class Processor extends Thread
 {
-	private boolean running = true;
+	private volatile boolean running = true;
 	
 	public void run ()
 	{
@@ -39,5 +39,6 @@ public class AppSync {
 		
 		scn.nextLine();
 		proc1.shutdown();
+		
 	}
 }
